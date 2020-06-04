@@ -1,0 +1,42 @@
+<div *ngIf="user">
+   <h3> Welcome {{user.firstName}} ! </h3>
+   <div *ngIf="(user.usertype | uppercase) === 'NGO'; then donee else donor"></div>
+   <ng-template #donee>
+      <div class="list-group">
+         <button type="button" class="list-group-item list-group-item-action" disabled>
+            Setup Complete Profile
+         </button>
+         <button type="button" [routerLink]="['/postcampaign']" class="list-group-item list-group-item-action">Post a
+            campaign</button>
+         <button type="button" class="list-group-item list-group-item-action" disabled>My Campaigns</button>
+         <button type="button" class="list-group-item list-group-item-action" disabled>Update/Cancel a campaign</button>
+         <button type="button" class="list-group-item list-group-item-action" disabled>Show Campaign Report</button>
+      </div>
+   </ng-template>
+
+   <ng-template #donor>
+      <div class="list-group">
+         <button type="button" class="list-group-item list-group-item-action" disabled>
+            Setup Complete Profile
+         </button>
+         <button type="button" class="list-group-item list-group-item-action" disabled>
+            My Profile
+         </button>
+         <button type="button" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+          (click)="isCollapsed = !isCollapsed" 
+            [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample" >
+            Pledge to Donate
+         </button>
+         <div id="collapseExample" [ngbCollapse]="isCollapsed" class="list-group">
+            <button type="button" [routerLink]="['/campaigns']" class="list-group-item list-group-item-action">Donate for a Campaign</button>
+            <button type="button" class="list-group-item list-group-item-action" disabled>Donate to NGO</button>
+         </div>
+         <button type="button" class="list-group-item list-group-item-action" disabled>
+            Withdraw a donation pledge
+         </button>
+         <button type="button" class="list-group-item list-group-item-action" disabled>
+            My Donation pledges
+         </button>
+      </div>
+   </ng-template>
+</div>

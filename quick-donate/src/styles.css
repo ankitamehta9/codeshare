@@ -1,0 +1,250 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    color: #444;
+    font-family: 'Helvetica', 'Verdana', sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  
+  html {
+    overflow: auto;
+  }
+  
+  body {
+    align-content: stretch;
+    align-items: stretch;
+    background: #ececec;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  
+  /**
+   * Header
+   */
+  
+  .header {
+    align-content: center;
+    align-items: stretch;
+    background: #3f51b5;
+    box-shadow:
+      0 4px 5px 0 rgba(0, 0, 0, 0.14),
+      0 2px 9px 1px rgba(0, 0, 0, 0.12),
+      0 4px 2px -2px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    font-size: 20px;
+    height: 56px;
+    justify-content: flex-start;
+    padding: 16px 16px 0 16px;
+    position: fixed;
+    transition: transform 0.233s cubic-bezier(0, 0, 0.21, 1) 0.1s;
+    width: 100%;
+    will-change: transform;
+    z-index: 1000;
+  }
+  
+  .header h1 {
+    flex: 1;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .header a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .header button {
+    border: none;
+    cursor: pointer;
+    height: 24px;
+    margin-right: 16px;
+    opacity: 0.54;
+    outline: none;
+    overflow: hidden;
+    text-indent: -30000px;
+    transition: opacity 0.333s cubic-bezier(0, 0, 0.21, 1);
+    width: 24px;
+  }
+  
+  .header #butLogin {
+    background: url(/assets/images/login.svg) center center no-repeat;
+  }
+  
+  .header #butHome {
+    background: url(/images/install.svg) center center no-repeat;
+  }
+  
+  /**
+   * Icons
+   */
+  
+  .icon {
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .icon.campaign {
+    background-image: url("/assets/images/donation.svg");
+  }
+
+  .icon.donate {
+    background-image: url("/assets/images/donate.svg");
+  }
+  
+  /**
+   * Main body
+   */
+  
+  .main {
+    flex: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 60px;
+  }
+  
+  /**
+   * Campaign card
+   */
+  
+  .campaign-card {
+    background: #fff;
+    border-radius: 2px;
+    box-shadow:
+      0 2px 2px 0 rgba(0, 0, 0, 0.14),
+      0 3px 1px -2px rgba(0, 0, 0, 0.2),
+      0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    margin: 16px;
+    padding: 16px;
+    position: relative;
+  }
+
+  .campaign-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+  
+  .campaign-card .butDonate {
+    background-color: transparent;
+    border: none;
+    float: right;
+    font-size: x-large;
+  }
+
+  .campaigns-heading {
+    font-size: 1.25em;
+    color: #444444;
+  }
+  
+  .campaign-card .campaign-title,
+  .campaign-card .description  {
+    font-size: 1.25em;
+    color: #444444;
+  }
+  
+  .campaign-card .date {
+    font-size: 1em;
+    color: #6c757d;
+  }
+  
+  .campaign-card .current {
+    display: flex;
+  }
+  
+  .campaign-card .current .icon {
+    height: 128px;
+    width: 128px;
+  }
+  
+  .campaign-card .current .visual {
+    display: flex;
+    font-size: 4em;
+  }
+  
+  .campaign-card .current .visual .scale {
+    font-size: 0.5em;
+    vertical-align: super;
+  }
+  /*
+  .campaign-card .current .visual,
+  .campaign-card .current .description {
+    flex-grow: 1;
+  }
+*/
+  .campaign-card .current .description {
+    margin-left: 10%;
+  }
+  
+  .campaign-card .current .description .label {
+    color: #666;
+  }
+  
+  /**
+   * Media query to adjust size of content for small screens
+   */
+  
+  @media (max-width: 450px) {
+    .campaign-card .date,
+    .campaign-card .description {
+      font-size: 0.9em;
+    }
+  
+    .campaign-card .current .icon {
+      height: 96px;
+      width: 96px;
+    }
+  
+    .campaign-card .current .visual {
+      font-size: 3em;
+    }
+
+  }
+
+  @media (max-width: 689.98px) {
+    .small-device {
+      display: inline-block;
+    }
+
+    .all-device {
+      display: none;
+    }
+  }
+
+  @media (min-width: 690px) {
+    .small-device {
+      display: none;
+    }
+
+    .all-device {
+      display: inline-block;
+    }
+  }
+
+/*
+Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+  

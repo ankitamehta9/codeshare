@@ -1,0 +1,14 @@
+.modal-button {
+    color: #fff;
+    background-color: #337ab7;
+    border: none;
+    border-radius: 3px;
+    height: 2.5em;
+    width: 45%;
+    margin: 2%;
+}
+
+.modal-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }

@@ -1,0 +1,23 @@
+<form [formGroup]="donateForm" (ngSubmit)="donate()">
+  <div class="form-group">
+    <label for="message">Leave a message for the cause:</label>
+    <input type="text" formControlName="description" class="form-control" />
+  </div>
+
+  <div class="form-group">
+    <label for="gifts">Here is what all you can donate:</label>
+    <ng-multiselect-dropdown [placeholder]="'Select an item'" [data]="gifts" formControlName="gifts"
+      [settings]="giftsettings" (onSelect)="onItemSelect($event)">
+    </ng-multiselect-dropdown>
+  </div>
+
+  <div class="form-group">
+    <label for="giftsReceived">Number of items you will be donating:</label>
+    <input type="number" formControlName="giftsReceived" class="form-control" />
+  </div>
+
+  <div class="form-group">
+    <button class="modal-button">Donate</button>
+    <button class="modal-button" (click)="closeModal('campaignModal')">Close</button>
+  </div>
+</form>

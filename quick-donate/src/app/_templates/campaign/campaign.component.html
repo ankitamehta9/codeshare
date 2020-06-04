@@ -1,0 +1,67 @@
+
+<nav class="navbar navbar-light" style="background-color: #6a72e4;">
+  <span class="navbar-brand mb-0 h1" style="color: #ffffff;"><strong> Active campaigns </strong></span>
+</nav>
+
+<ng-container *ngFor="let campaign of campaigns">
+    <div id="campaignID" class="campaign-card">
+      <button type="button" class="btn btn-primary butDonate" (click)="openModal('campaignModal', campaign)">
+       <span class="badge badge-pill badge-light"><i class="fa fa-gift"></i></span>
+      </button>
+      <div class="current" (click)="showDetails(campaign.id)">
+        <div class="visual">
+          <div class="icon campaign"></div>
+        </div>
+
+        <div class="description">
+          <div class="campaign-title">{{campaign.title}}</div>
+          <div class="date">
+            {{campaign.startDate}}
+             - 
+            {{campaign.endDate}}
+          </div>
+          <div class="label all-device">{{campaign.description}}</div>
+        </div>
+      </div>
+
+      <div id="showDetails{{campaign.id}}" hidden>false</div>
+
+      <div id="camp-details{{campaign.id}}" hidden>
+        <hr>
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="label small-device">{{campaign.description}}</div>
+          </div>
+          <div class="row">
+            <div class="col-sm-2">
+              <span class="label">Causes:</span>
+            </div>
+            <div class="col-sm-10">
+              <ng-container *ngFor="let audience of campaign.audience">
+                <span class="badge badge-pill badge-info">{{audience.name}}</span>
+                &nbsp;
+              </ng-container>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3">
+              <span class="label">You can donate:</span>
+            </div>
+            <div class="col-sm-8">
+              <ng-container *ngFor="let gift of campaign.giftCategories">
+                <span class="badge badge-pill badge-info">{{gift.name}}</span>
+                &nbsp;
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  <app-modal id="campaignModal">
+    <ng-container *ngIf="activeCampaign">
+      <app-donation [activeCampaign]="activeCampaign"></app-donation>
+    </ng-container>
+  </app-modal> 
+<!--routerLink="/detail/{{hero.id}}"-->

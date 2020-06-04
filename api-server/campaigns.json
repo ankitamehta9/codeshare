@@ -1,0 +1,268 @@
+[
+    {
+        "id": 11,
+        "title": "Test campaign",
+        "description": "This is a test campaign to collect the gift items for the needy people in your area.",
+        "giftCategories": [
+            {
+                "id": 11,
+                "name": "Clothes"
+            },
+            {
+                "id": 31,
+                "name": "Stationary"
+            },
+            {
+                "id": 51,
+                "name": "Services"
+            }
+        ],
+        "audience": [
+            {
+                "id": 21,
+                "name": "Orphans"
+            },
+            {
+                "id": 41,
+                "name": "Environment"
+            },
+            {
+                "id": 51,
+                "name": "Old Age home members"
+            }
+        ],
+        "giftLimit": 100,
+        "giftsReceived": 50,
+		"pickedup": "N", 
+        "startDate": "2020-06-03",
+        "endDate": "2020-06-26"
+    },
+    {
+        "id": 12,
+        "title": "My Campaign",
+        "description": "This is my campaign",
+        "giftCategories": [
+            {
+                "id": 11,
+                "name": "Services"
+            },
+            {
+                "id": 31,
+                "name": "Toys"
+            },
+            {
+                "id": 51,
+                "name": "Stationary"
+            }
+        ],
+        "audience": [
+            {
+                "id": 21,
+                "name": "Orphans"
+            },
+            {
+                "id": 61,
+                "name": "Refugees"
+            },
+            {
+                "id": 71,
+                "name": "Disaster affected"
+            }
+        ],
+        "giftLimit": 50,
+        "giftsReceived": 50,
+		"pickedup": "Y", 
+        "startDate": "2020-06-03",
+        "endDate": "2020-06-26"
+    },
+    {
+        "id": 13,
+        "title": "My first campaign",
+        "description": "This is my first campaign",
+        "giftCategories": [
+            {
+                "id": 11,
+                "name": "Services"
+            },
+            {
+                "id": 31,
+                "name": "Toys"
+            },
+            {
+                "id": 71,
+                "name": "Other"
+            }
+        ],
+        "audience": [
+            {
+                "id": 11,
+                "name": "Animals"
+            },
+            {
+                "id": 61,
+                "name": "Refugees"
+            },
+            {
+                "id": 81,
+                "name": "Other"
+            }
+        ],
+        "giftLimit": 150,
+        "giftsReceived": 50,
+		"pickedup": "N", 
+        "startDate": "2020-06-03",
+        "endDate": "2020-06-26"
+    },
+    {
+        "id": 14,
+        "title": "My first campaign",
+        "description": "This is my first campaign",
+        "giftCategories": [
+            {
+                "id": 11,
+                "name": "Services"
+            },
+            {
+                "id": 31,
+                "name": "Toys"
+            },
+            {
+                "id": 71,
+                "name": "Other"
+            }
+        ],
+        "audience": [
+            {
+                "id": 11,
+                "name": "Animals"
+            },
+            {
+                "id": 61,
+                "name": "Refugees"
+            },
+            {
+                "id": 81,
+                "name": "Other"
+            }
+        ],
+        "giftLimit": 150,
+        "giftsReceived": 50,
+		"pickedup": "N", 
+        "startDate": "2020-06-03",
+        "endDate": "2020-06-26"
+    },
+    {
+        "id": 15,
+        "title": "My first campaign",
+        "description": "This is my first campaign",
+        "giftCategories": [
+            {
+                "id": 11,
+                "name": "Services"
+            },
+            {
+                "id": 31,
+                "name": "Toys"
+            },
+            {
+                "id": 71,
+                "name": "Other"
+            }
+        ],
+        "audience": [
+            {
+                "id": 11,
+                "name": "Animals"
+            },
+            {
+                "id": 61,
+                "name": "Refugees"
+            },
+            {
+                "id": 81,
+                "name": "Other"
+            }
+        ],
+        "giftLimit": 150,
+        "giftsReceived": 50,
+		"pickedup": "N", 
+        "startDate": "2020-06-03",
+        "endDate": "2020-06-26"
+    },
+    {
+        "id": 16,
+        "title": "My first campaign",
+        "description": "This is my first campaign",
+        "giftCategories": [
+            {
+                "id": 11,
+                "name": "Services"
+            },
+            {
+                "id": 31,
+                "name": "Toys"
+            },
+            {
+                "id": 71,
+                "name": "Other"
+            }
+        ],
+        "audience": [
+            {
+                "id": 11,
+                "name": "Animals"
+            },
+            {
+                "id": 61,
+                "name": "Refugees"
+            },
+            {
+                "id": 81,
+                "name": "Other"
+            }
+        ],
+        "giftLimit": 150,
+        "giftsReceived": 150,
+		"pickedup": "Y", 
+        "startDate": "2020-06-03",
+        "endDate": "2020-06-26"
+    },
+    {
+        "id": 17,
+        "title": "My first campaign",
+        "description": "This is my first campaign",
+        "giftCategories": [
+            {
+                "id": 11,
+                "name": "Services"
+            },
+            {
+                "id": 31,
+                "name": "Toys"
+            },
+            {
+                "id": 71,
+                "name": "Other"
+            }
+        ],
+        "audience": [
+            {
+                "id": 11,
+                "name": "Animals"
+            },
+            {
+                "id": 61,
+                "name": "Refugees"
+            },
+            {
+                "id": 81,
+                "name": "Other"
+            }
+        ],
+        "giftLimit": 150,
+        "giftsReceived": 50,
+		"pickedup": "N", 
+        "startDate": "2020-06-03",
+        "endDate": "2020-06-26"
+    }
+]
